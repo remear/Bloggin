@@ -1,0 +1,14 @@
+.post
+  %h2
+    Login
+= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form'}) do |f|
+  %center
+    = f.text_field :email
+    = f.password_field :password
+    %br/
+    - if devise_mapping.rememberable?
+      %p
+        = f.check_box :remember_me, :id => 'remember'
+        = f.label :remember_me, :class => 'choice' 
+    %p= f.submit "Login"
+= render :partial => "devise/shared/links"

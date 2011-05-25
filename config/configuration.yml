@@ -1,0 +1,11 @@
+common:
+  site_title: Bloggin'
+  site_description: Open Source Ruby on Rails powered Blogging Platform
+  site_author: John Doe
+  
+production:
+  email_exceptions: true
+
+development:
+  root_url: localhost:3000
+  photos_max_number: 10
