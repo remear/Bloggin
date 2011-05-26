@@ -3,7 +3,7 @@
   %head
     %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
     = stylesheet_link_tag 'application', '/markitup/skins/simple/style.css', '/markitup/sets/html/style.css'
-    = javascript_include_tag :defaults, 'newsies', '/markitup/jquery.markitup.js', '/markitup/sets/html/set.js'
+    = javascript_include_tag :defaults, 'newsies', 'jquery.easing.1.3', '/markitup/jquery.markitup.js', '/markitup/sets/html/set.js'
     %link{:href => "/feed", :rel => "alternate", :type => "application/rss+xml"}
     %meta{:keywords => "Ruby, Rails, Sinatra, jQuery, jquery, ruby on rails, ror, mysql, postgresql,"}
     %meta{:description => "Discussion on Web Development focusing on Ruby, Ruby on Rails, Rails, jQuery, CoffeeScript, MySQL, PostgreSQL and much more.", :name => "Evan Sparkman | Aspiring Rubyist"}
@@ -48,13 +48,6 @@
       });
       
     :javascript
-      $(document).ready(function() {
-        $.cleditor.defaultOptions.height = 300;
-        
-        $("#textarea").cleditor()[0].focus();
-      });
-
-    :javascript
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'GA-ACCOUNTNUMBER-HERE']);
       _gaq.push(['_trackPageview']);
@@ -83,6 +76,7 @@
             = link_to "Logout", logout_path, :class => 'menu_item'
             
         -else
+          = link_to "Home", root_path, :class => 'menu_item'
           %a.menu_item{:href => '/resume.html'}
             Resume
           %a.menu_item{:href => 'http://www.github.com/esparkman'}
