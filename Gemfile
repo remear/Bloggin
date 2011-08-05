@@ -9,6 +9,7 @@ gem 'sass'
 gem 'jquery-rails'
 gem 'devise'
 gem 'acts-as-taggable-on'
+gem 'rails-themes'
 
 group :test, :development do
   gem 'haml-rails'

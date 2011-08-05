@@ -103,6 +103,8 @@ GEM
       activesupport (= 3.0.9)
       bundler (~> 1.0)
       railties (= 3.0.9)
+    rails-themes (1.1.0)
+      rails (>= 3.0.0)
     railties (3.0.9)
       actionpack (= 3.0.9)
       activesupport (= 3.0.9)
@@ -159,5 +161,6 @@ DEPENDENCIES
   mysql2 (~> 0.2.7)
   nifty-generators
   rails (= 3.0.9)
+  rails-themes
   rspec-rails
   sass
