@@ -1,0 +1,25 @@
+production:
+  adapter: mysql2
+  encoding: utf8
+  database: blog
+  username: root
+  password: 24xhub
+  timeout: 5000
+  
+development:
+  adapter: mysql2
+  encoding: utf8
+  database: blog
+  username: root
+  password: 24xhub
+  timeout: 5000
+
+test: &TEST
+  adapter: mysql2
+  encoding: utf8
+  database: blog-test
+  username: root
+  password: 24xhub
+  timeout: 5000
+cucumber:
+  <<: *TEST
