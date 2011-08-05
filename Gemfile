@@ -8,6 +8,7 @@ gem 'haml'
 gem 'sass'
 gem 'jquery-rails'
 gem 'devise'
+gem 'acts-as-taggable-on'
 
 group :test, :development do
   gem 'haml-rails'

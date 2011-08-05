@@ -1,24 +1,9 @@
-class Post
-  include Mongoid::Document
-  include Mongoid::Timestamps
-  include Mongoid::Slug
-  include Mongoid::Taggable
+class Post < ActiveRecord::Base
+  belongs_to :user
   
-  field :title
-  field :content
-  field :publish, :type => Boolean, :default => true
+  acts_as_taggable
   
-  slug :title
-  
-  index :title
-  
-  belongs_to_related :user
-  # references_many :tags, :dependent => :destroy
-  # 
-  # accepts_nested_attributes_for :tags, :allow_destroy => :true, :reject_if => proc { |attrs| attrs.all? { |k, v| v.blank? } }
-
   def full_url
-    "/posts/#{slug}"
+    "/posts/#{self.slug}"
   end
-
 end
